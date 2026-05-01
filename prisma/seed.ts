@@ -7,8 +7,10 @@ const prisma = new PrismaClient()
 async function main() {
   console.log('🌱 Seeding database...')
 
-  // Admin user
-  const hashedPassword = await bcrypt.hash('admin123', 10)
+  // NOTE: This password is for development/seeding only.
+  // Change it immediately after first login in production.
+  const seedPassword = process.env.SEED_ADMIN_PASSWORD ?? 'admin123'
+  const hashedPassword = await bcrypt.hash(seedPassword, 10)
   const admin = await prisma.user.upsert({
     where: { email: 'admin@canterburyguidedtours.com' },
     update: {},

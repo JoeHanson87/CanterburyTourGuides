@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { getTodayDateString } from '@/lib/utils'
 
 const schema = z.object({
   contactName: z.string().min(1, 'Contact name required'),
@@ -74,7 +75,7 @@ export default function BookGroupPage() {
     )
   }
 
-  const today = new Date().toISOString().split('T')[0]
+  const today = getTodayDateString()
 
   return (
     <div className="min-h-screen bg-brand-cream py-12">
