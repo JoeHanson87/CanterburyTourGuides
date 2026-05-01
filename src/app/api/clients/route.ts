@@ -1,0 +1,54 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
+
+export async function GET(request: NextRequest) {
+  const session = await auth()
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  try {
+    const { searchParams } = new URL(request.url)
+    const search = searchParams.get('search') || ''
+
+    const clients = await prisma.client.findMany({
+      where: search
+        ? {
+            OR: [
+              { firstName: { contains: search } },
+              { lastName: { contains: search } },
+              { email: { contains: search } },
+            ],
+          }
+        : {},
+      orderBy: { lastName: 'asc' },
+    })
+    return NextResponse.json(clients)
+  } catch {
+    return NextResponse.json({ error: 'Failed to fetch clients' }, { status: 500 })
+  }
+}
+
+export async function POST(request: NextRequest) {
+  const session = await auth()
+  if (!session) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  try {
+    const body = await request.json()
+    const { firstName, lastName, email, phone } = body
+
+    if (!firstName || !lastName || !email) {
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+
+    const client = await prisma.client.create({
+      data: { firstName, lastName, email, phone: phone || null },
+    })
+    return NextResponse.json(client, { status: 201 })
+  } catch {
+    return NextResponse.json({ error: 'Failed to create client' }, { status: 500 })
+  }
+}

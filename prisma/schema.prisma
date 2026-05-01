@@ -1,0 +1,142 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String?
+  email     String   @unique
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Tour {
+  id                String         @id @default(cuid())
+  name              String
+  type              String
+  description       String
+  duration          String
+  price             Float
+  childPrice        Float?
+  maxCapacity       Int
+  meetingPoint      String
+  includesCathedral Boolean        @default(true)
+  isActive          Boolean        @default(true)
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+}
+
+model DailyBooking {
+  id          String      @id @default(cuid())
+  clientId    String
+  client      Client      @relation(fields: [clientId], references: [id])
+  tourDate    DateTime
+  timeSlot    String
+  adults      Int
+  children    Int         @default(0)
+  totalAmount Float
+  status      String      @default("CONFIRMED")
+  notes       String?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  rotaEntries RotaEntry[]
+}
+
+model GroupBooking {
+  id              String    @id @default(cuid())
+  clientId        String
+  client          Client    @relation(fields: [clientId], references: [id])
+  organisation    String?
+  groupSize       Int
+  preferredDate   DateTime
+  alternativeDate DateTime?
+  tourTheme       String?
+  groupType       String?
+  requirements    String?
+  status          String    @default("ENQUIRY")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Client {
+  id            String         @id @default(cuid())
+  firstName     String
+  lastName      String
+  email         String         @unique
+  phone         String?
+  organisation  String?
+  country       String?
+  notes         String?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  dailyBookings DailyBooking[]
+  groupBookings GroupBooking[]
+}
+
+model Guide {
+  id           String              @id @default(cuid())
+  firstName    String
+  lastName     String
+  email        String              @unique
+  phone        String?
+  bio          String?
+  badgeNumber  String?
+  isActive     Boolean             @default(true)
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  availability GuideAvailability[]
+  rotaEntries  RotaEntry[]
+  cpdBookings  CPDBooking[]
+}
+
+model GuideAvailability {
+  id        String   @id @default(cuid())
+  guideId   String
+  guide     Guide    @relation(fields: [guideId], references: [id])
+  date      DateTime
+  available Boolean  @default(true)
+  notes     String?
+  createdAt DateTime @default(now())
+}
+
+model RotaEntry {
+  id             String        @id @default(cuid())
+  guideId        String
+  guide          Guide         @relation(fields: [guideId], references: [id])
+  date           DateTime
+  timeSlot       String
+  dailyBookingId String?
+  dailyBooking   DailyBooking? @relation(fields: [dailyBookingId], references: [id])
+  status         String        @default("CONFIRMED")
+  notes          String?
+  createdAt      DateTime      @default(now())
+}
+
+model Upsell {
+  id          String  @id @default(cuid())
+  name        String
+  description String?
+  price       Float
+  isActive    Boolean @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model CPDBooking {
+  id        String   @id @default(cuid())
+  guideId   String
+  guide     Guide    @relation(fields: [guideId], references: [id])
+  title     String
+  provider  String?
+  date      DateTime
+  cost      Float?
+  status    String   @default("booked")
+  notes     String?
+  createdAt DateTime @default(now())
+}
