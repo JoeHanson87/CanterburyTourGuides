@@ -1,4 +1,38 @@
-# Canterbury Guided Tours Digital Platform Proposal
+# Canterbury Guided Tours
+
+## Digital Platform Proposal
+
+### Public Website and Admin Operations System
+
+Prepared for stakeholder review and PDF presentation
+
+**Document Date:** 4 May 2026  
+**Version:** 1.0  
+**Prepared For:** Canterbury Guided Tours
+
+---
+
+This proposal presents the current Canterbury Guided Tours platform as a combined customer-facing website and secure internal management system. It includes visual page references, operational workflows, and technical appendices to support review, sign-off, and future development planning.
+
+<div style="page-break-after: always;"></div>
+
+## Contents
+
+1. [Proposal Summary](#proposal-summary)
+2. [Project Objectives](#project-objectives)
+3. [What This Platform Delivers](#what-this-platform-delivers)
+4. [Customer-Facing Experience](#1-customer-facing-experience)
+5. [Admin and Operations Platform](#2-admin-and-operations-platform-admin)
+6. [Appendix A: Database Models and Relationships](#appendix-a-database-models-and-relationships)
+7. [Appendix B: API Endpoints](#appendix-b-api-endpoints)
+8. [Appendix C: Authentication and Security](#appendix-c-authentication-and-security)
+9. [Appendix D: Technology Stack](#appendix-d-technology-stack)
+10. [Appendix E: Key Features and Business Logic](#appendix-e-key-features-and-business-logic)
+11. [Appendix F: Future Enhancement Opportunities](#appendix-f-future-enhancement-opportunities)
+12. [Appendix G: Deployment Considerations](#appendix-g-deployment-considerations)
+13. [Closing Summary](#closing-summary)
+
+<div style="page-break-after: always;"></div>
 
 ## Proposal Summary
 
