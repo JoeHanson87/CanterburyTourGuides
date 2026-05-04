@@ -1,16 +1,34 @@
-# Canterbury Guided Tours - Complete System Documentation
+# Canterbury Guided Tours Digital Platform Proposal
 
-## Executive Summary
+## Proposal Summary
 
-Canterbury Guided Tours is a full-stack web application built with Next.js 15, TypeScript, and Prisma ORM. The platform consists of:
-- **Public Website**: For customers to browse and book tours
-- **Admin Panel**: For staff to manage bookings, guides, rotas, and business operations
+This document presents the Canterbury Guided Tours digital platform as a complete customer-facing website and internal operations system. It is written to support client review, stakeholder sign-off, and PDF presentation.
 
-This document now includes live screenshots from the current build so each section shows the actual interface alongside the functional explanation.
+The platform is made up of two connected parts:
+- **Public Website**: A polished marketing and booking experience for visitors, schools, and private groups.
+- **Admin System**: A secure back-office workspace for managing bookings, guides, availability, invoices, and reporting.
+
+The main body of this proposal is intentionally written in plain English and supported by live screenshots from the current build. Detailed technical reference material is included later as appendices.
+
+## Project Objectives
+
+- Present Canterbury Guided Tours as a premium, professional visitor experience.
+- Convert website visitors into daily tour bookings and group enquiries.
+- Give staff a clear operational system for managing customers, guides, and schedules.
+- Create a scalable foundation for future features such as payments, notifications, and advanced reporting.
+
+## What This Platform Delivers
+
+- A responsive public website with clear calls to action and streamlined booking journeys.
+- Distinct journeys for daily tours, private groups, and general contact enquiries.
+- A secure admin area with live operational data and structured workflow management.
+- A single source of truth for clients, bookings, guides, rotas, invoices, and reports.
 
 ---
 
-## Part 1: Public Website Pages
+## 1. Customer-Facing Experience
+
+The public website is designed to do two things well: build confidence in the brand and convert interest into bookings. Each page has a clear role in the customer journey, from discovery through to enquiry or confirmed reservation.
 
 ### 1. Home Page (`/`)
 **Purpose**: Welcome landing page showcasing the company
@@ -211,7 +229,9 @@ This document now includes live screenshots from the current build so each secti
 
 ---
 
-## Part 2: Admin Panel (`/admin`)
+## 2. Admin and Operations Platform (`/admin`)
+
+The admin system is the operational backbone of the platform. It gives the business a practical internal workspace for day-to-day management, while keeping customer data, guide scheduling, and financial visibility in one place.
 
 ### Authentication & Access Control
 - **Login URL**: `/login`
@@ -629,9 +649,13 @@ RotaEntry {
 
 ---
 
-## Part 3: Database Models & Relationships
+## 3. Technical Appendices
 
-### Entity Relationship Diagram
+The sections below are included as implementation reference material. They support technical review and future development planning, but the proposal narrative above should be treated as the primary client-facing summary.
+
+### Appendix A: Database Models and Relationships
+
+#### Entity Relationship Diagram
 
 ```
 User (Admin accounts)
@@ -723,9 +747,9 @@ Upsell (Add-on products)
 
 ---
 
-## Part 4: API Endpoints
+### Appendix B: API Endpoints
 
-### Public Booking APIs
+#### Public Booking APIs
 
 #### POST `/api/bookings/daily`
 **Purpose**: Create a daily tour booking
@@ -773,35 +797,35 @@ Upsell (Add-on products)
 
 ---
 
-## Part 5: Authentication & Security
+### Appendix C: Authentication and Security
 
-### NextAuth Configuration
+#### NextAuth Configuration
 - **Provider**: Credentials (email + password)
 - **Session Strategy**: JWT (stateless)
 - **Secret**: Stored in `AUTH_SECRET` environment variable
 - **Session Duration**: Configurable (default 30 days)
 
-### Password Security
+#### Password Security
 - Passwords hashed with bcrypt (cost: 10)
 - Stored in User model
 - Never transmitted in plain text over HTTPS
 
-### Route Protection
+#### Route Protection
 - **Middleware** (`src/middleware.ts`):
   - Protects all `/admin/**` routes
   - Redirects unauthenticated users to `/login`
   - Allows public access to `/login` page
 
-### CSRF Protection
+#### CSRF Protection
 - NextAuth provides built-in CSRF token handling
 - Tokens set in HTTP-only cookies
 - Automatic validation on state-changing requests
 
 ---
 
-## Part 6: Technology Stack Details
+### Appendix D: Technology Stack
 
-### Frontend
+#### Frontend
 - **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **UI Library**: React 18.3
@@ -809,20 +833,20 @@ Upsell (Add-on products)
 - **Forms**: React Hook Form + Zod validation
 - **Charts**: Recharts 2.15
 
-### Backend
+#### Backend
 - **Runtime**: Node.js 18+
 - **API**: Next.js API Routes
 - **ORM**: Prisma 6.6 with TypeScript support
 - **Database**: SQLite with libsql adapter
 - **Authentication**: NextAuth v5
 
-### Database
+#### Database
 - **Type**: SQLite (local development)
 - **Client**: libsql
 - **Adapter**: Prisma adapter for libsql
 - **Location**: `./dev.db` (local development)
 
-### Development Tools
+#### Development Tools
 - **Linting**: ESLint + Next.js config
 - **Styling**: PostCSS + Autoprefixer
 - **Build**: Next.js built-in build system
@@ -830,29 +854,29 @@ Upsell (Add-on products)
 
 ---
 
-## Part 7: Key Features & Business Logic
+### Appendix E: Key Features and Business Logic
 
-### Booking Price Calculation
+#### Booking Price Calculation
 ```
 DailyBooking.totalAmount = (adults × Tour.price) + (children × Tour.childPrice)
 ```
 
-### Tour Capacity Management
+#### Tour Capacity Management
 - Max capacity defined per tour
 - Can check available slots: `totalBookings < maxCapacity`
 - Optional overbooking logic can be implemented
 
-### Guide Availability Logic
+#### Guide Availability Logic
 - Check GuideAvailability for date before assigning rota
 - Prevent double-booking same guide on same date/time
 - Respect guide preferences (part-time, specific hours)
 
-### Revenue Calculation
+#### Revenue Calculation
 - Dashboard shows: `SUM(DailyBooking.totalAmount)` for revenue
 - Can filter by date range for reporting
 - Excludes cancelled bookings
 
-### Client Lifecycle
+#### Client Lifecycle
 1. Client submits booking/inquiry form
 2. Client record created automatically if new
 3. DailyBooking or GroupBooking record created
@@ -863,9 +887,9 @@ DailyBooking.totalAmount = (adults × Tour.price) + (children × Tour.childPrice
 
 ---
 
-## Part 8: Future Enhancement Opportunities
+### Appendix F: Future Enhancement Opportunities
 
-### Potential Features
+#### Potential Features
 - Payment processing integration (Stripe, PayPal)
 - Email notifications and automated confirmations
 - SMS reminders for upcoming tours
@@ -883,21 +907,21 @@ DailyBooking.totalAmount = (adults × Tour.price) + (children × Tour.childPrice
 
 ---
 
-## Part 9: Deployment Considerations
+### Appendix G: Deployment Considerations
 
-### Environment Variables
+#### Environment Variables
 ```env
 DATABASE_URL=file:./dev.db (development)
 AUTH_SECRET=<secure-random-string>
 NEXTAUTH_URL=https://yourdomain.com (production)
 ```
 
-### Production Database
+#### Production Database
 - Recommend migrating to Turso (hosted libsql)
 - Or PostgreSQL with Prisma adapter
 - Regular backups essential
 
-### Security Checklist
+#### Security Checklist
 - ✓ HTTPS enforced
 - ✓ CSRF protection enabled
 - ✓ Secure headers configured
@@ -907,7 +931,7 @@ NEXTAUTH_URL=https://yourdomain.com (production)
 - ✓ Rate limiting on API endpoints
 - ✓ Admin credentials rotated regularly
 
-### Performance
+#### Performance
 - CDN for static assets
 - Database indexing on frequently queried fields
 - Image optimization with Next.js Image
@@ -916,11 +940,11 @@ NEXTAUTH_URL=https://yourdomain.com (production)
 
 ---
 
-## Conclusion
+## Closing Summary
 
-Canterbury Guided Tours provides a complete solution for managing tour bookings and business operations. The public website attracts customers while the admin panel enables efficient internal operations through booking management, guide coordination, and business analytics.
+Canterbury Guided Tours now has a platform structure that supports both presentation and operations. On the public side, the website positions the business clearly, communicates the value of the tours, and gives visitors direct paths to book or enquire. On the operational side, the admin workspace brings bookings, guide management, scheduling, invoicing, and reporting into one coherent system.
 
-The modular architecture allows for easy scaling and feature additions as the business grows.
+For PDF export and stakeholder review, this document is now arranged so the most important commercial and functional information appears first, with deeper technical detail retained in the appendices for reference.
 
 ---
 
