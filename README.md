@@ -37,6 +37,37 @@ A full-stack web application for Canterbury Guided Tours — a professional Gree
 | Invoices | Invoice generation and tracking |
 | Reports | Revenue and booking analytics with charts |
 
+## Screenshot Reference (Updated Theme)
+
+The screenshots in `docs/screenshots/` have been refreshed to match the current visual theme.
+
+### Public Website Screens
+
+| Page | Screenshot |
+|---|---|
+| Home | `docs/screenshots/home-page.png` |
+| About | `docs/screenshots/about-page.png` |
+| Daily Tours | `docs/screenshots/daily-tours-page.png` |
+| Group Tours | `docs/screenshots/group-tours-page.png` |
+| Daily Booking | `docs/screenshots/daily-booking-page.png` |
+| Group Booking | `docs/screenshots/group-booking-page.png` |
+| Contact | `docs/screenshots/contact-page.png` |
+
+### Admin Screens
+
+| Page | Screenshot |
+|---|---|
+| Login | `docs/screenshots/login-page.png` |
+| Dashboard | `docs/screenshots/admin-dashboard-page.png` |
+| Daily Bookings | `docs/screenshots/admin-daily-bookings-page.png` |
+| Group Bookings | `docs/screenshots/admin-group-bookings-page.png` |
+| Clients | `docs/screenshots/admin-clients-page.png` |
+| Guides | `docs/screenshots/admin-guides-page.png` |
+| Availability | `docs/screenshots/admin-availability-page.png` |
+| Rotas | `docs/screenshots/admin-rotas-page.png` |
+| Invoices | `docs/screenshots/admin-invoices-page.png` |
+| Reports | `docs/screenshots/admin-reports-page.png` |
+
 ## Getting Started
 
 ### Prerequisites

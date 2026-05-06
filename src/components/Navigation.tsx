@@ -20,8 +20,16 @@ export default function Navigation() {
     <nav className="bg-brand-grey-800 text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Site name on the left */}
+          {/* Logo + site name on the left */}
           <Link href="/" className="flex items-center space-x-3">
+            <Image
+              src="/images/logo.png"
+              alt="Canterbury Guided Tours logo"
+              width={56}
+              height={56}
+              className="rounded-full"
+              priority
+            />
             <span className="font-serif text-lg font-bold leading-tight">
               Canterbury Guided Tours
             </span>
@@ -43,17 +51,6 @@ export default function Navigation() {
               className="ml-3 bg-brand-red-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-brand-red-700 transition-colors"
             >
               Book Now
-            </Link>
-            {/* Logo at top right */}
-            <Link href="/" className="ml-4">
-              <Image
-                src="/images/logo.png"
-                alt="Canterbury Guided Tours logo"
-                width={64}
-                height={64}
-                className="rounded-full"
-                priority
-              />
             </Link>
           </div>
 

@@ -6,13 +6,15 @@
 
 Prepared for stakeholder review and PDF presentation
 
-**Document Date:** 4 May 2026  
-**Version:** 1.0  
+**Document Date:** 6 May 2026  
+**Version:** 1.1  
 **Prepared For:** Canterbury Guided Tours
 
 ---
 
 This proposal presents the current Canterbury Guided Tours platform as a combined customer-facing website and secure internal management system. It includes visual page references, operational workflows, and technical appendices to support review, sign-off, and future development planning.
+
+All page screenshots referenced in this document have been refreshed to reflect the current site theme and navigation styling.
 
 <div style="page-break-after: always;"></div>
 
