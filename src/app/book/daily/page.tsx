@@ -87,7 +87,7 @@ export default function BookDailyPage() {
       <div className="min-h-screen bg-brand-cream flex items-center justify-center px-4">
         <div className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h1 className="font-serif text-2xl font-bold text-brand-green-800 mb-3">
+          <h1 className="font-serif text-2xl font-bold text-brand-navy-800 mb-3">
             Booking Confirmed!
           </h1>
           <p className="text-gray-600 mb-6">
@@ -106,7 +106,7 @@ export default function BookDailyPage() {
     <div className="min-h-screen bg-brand-cream py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-brand-green-800 mb-2">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-brand-navy-800 mb-2">
             Book Your Daily Tour
           </h1>
           <p className="text-gray-600">
@@ -118,7 +118,7 @@ export default function BookDailyPage() {
           <div className="md:col-span-2 space-y-6">
             {/* Tour Options */}
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <h2 className="font-serif text-xl font-bold text-brand-green-800 mb-4">Tour Details</h2>
+              <h2 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">Tour Details</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -128,7 +128,7 @@ export default function BookDailyPage() {
                     type="date"
                     min={today}
                     {...register('date')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                   {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date.message}</p>}
                 </div>
@@ -138,7 +138,7 @@ export default function BookDailyPage() {
                   </label>
                   <select
                     {...register('timeSlot')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   >
                     <option value="11:00">11:00am (Daily)</option>
                     <option value="14:00">2:00pm (Seasonal Apr–Oct)</option>
@@ -155,7 +155,7 @@ export default function BookDailyPage() {
                     min={1}
                     max={20}
                     {...register('adults')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                   {errors.adults && <p className="text-red-500 text-xs mt-1">{errors.adults.message}</p>}
                 </div>
@@ -168,7 +168,7 @@ export default function BookDailyPage() {
                     min={0}
                     max={20}
                     {...register('children')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                 </div>
               </div>
@@ -176,14 +176,14 @@ export default function BookDailyPage() {
 
             {/* Personal Details */}
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <h2 className="font-serif text-xl font-bold text-brand-green-800 mb-4">Your Details</h2>
+              <h2 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">Your Details</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
                   <input
                     type="text"
                     {...register('firstName')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                   {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>}
                 </div>
@@ -192,7 +192,7 @@ export default function BookDailyPage() {
                   <input
                     type="text"
                     {...register('lastName')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                   {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName.message}</p>}
                 </div>
@@ -201,7 +201,7 @@ export default function BookDailyPage() {
                   <input
                     type="email"
                     {...register('email')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
                 </div>
@@ -210,7 +210,7 @@ export default function BookDailyPage() {
                   <input
                     type="tel"
                     {...register('phone')}
-                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                   />
                 </div>
               </div>
@@ -222,14 +222,14 @@ export default function BookDailyPage() {
                   {...register('notes')}
                   rows={3}
                   placeholder="Wheelchair access, dietary requirements, etc."
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
                 />
               </div>
             </div>
 
             {/* Extras */}
             <div className="bg-white rounded-xl p-6 shadow-md">
-              <h2 className="font-serif text-xl font-bold text-brand-green-800 mb-4">Optional Extras</h2>
+              <h2 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">Optional Extras</h2>
               <div className="space-y-3">
                 {[
                   { name: 'upsellCreamTea' as const, label: 'Traditional Cream Tea', price: '+£18 per person' },
@@ -240,10 +240,10 @@ export default function BookDailyPage() {
                     <input
                       type="checkbox"
                       {...register(extra.name)}
-                      className="h-4 w-4 text-brand-green-600 border-gray-300 rounded"
+                      className="h-4 w-4 text-brand-navy-600 border-gray-300 rounded"
                     />
                     <span className="text-gray-700 text-sm flex-1">{extra.label}</span>
-                    <span className="text-brand-green-800 font-semibold text-sm">{extra.price}</span>
+                    <span className="text-brand-navy-800 font-semibold text-sm">{extra.price}</span>
                   </label>
                 ))}
               </div>
@@ -252,9 +252,9 @@ export default function BookDailyPage() {
 
           {/* Order Summary */}
           <div className="md:col-span-1">
-            <div className="bg-brand-green-800 text-white rounded-xl p-6 sticky top-24">
+            <div className="bg-brand-navy-800 text-white rounded-xl p-6 sticky top-24">
               <h2 className="font-serif text-xl font-bold mb-4">Summary</h2>
-              <div className="space-y-2 text-sm border-b border-brand-green-700 pb-4 mb-4">
+              <div className="space-y-2 text-sm border-b border-brand-navy-700 pb-4 mb-4">
                 <div className="flex justify-between">
                   <span>Adults × {adults}</span>
                   <span>£{adults * PRICES.adult}</span>
@@ -300,7 +300,7 @@ export default function BookDailyPage() {
               >
                 {loading ? 'Processing...' : 'Confirm Booking'}
               </button>
-              <p className="text-brand-green-300 text-xs mt-3 text-center">
+              <p className="text-brand-navy-300 text-xs mt-3 text-center">
                 No payment required online. Pay on the day.
               </p>
             </div>

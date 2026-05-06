@@ -16,7 +16,7 @@ export default async function AdminGuidesPage() {
         {guides.map((g) => (
           <div key={g.id} className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
             <div className="flex items-start space-x-4">
-              <div className="bg-brand-green-100 rounded-full w-12 h-12 flex items-center justify-center text-brand-green-800 font-bold text-lg flex-shrink-0">
+              <div className="bg-brand-navy-100 rounded-full w-12 h-12 flex items-center justify-center text-brand-navy-800 font-bold text-lg flex-shrink-0">
                 {g.firstName[0]}{g.lastName[0]}
               </div>
               <div className="flex-1 min-w-0">

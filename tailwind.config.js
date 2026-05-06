@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-green': {
+        'brand-navy': {
           50: '#e6f3fa',
           100: '#cde7f5',
           200: '#9dcfeb',

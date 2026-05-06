@@ -12,7 +12,7 @@ export default function DailyToursPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-brand-green-800 text-white py-16">
+      <section className="bg-brand-navy-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <span className="bg-brand-gold-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block">
@@ -21,7 +21,7 @@ export default function DailyToursPage() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
               Daily Canterbury Walking Tours
             </h1>
-            <p className="text-brand-green-100 text-xl leading-relaxed">
+            <p className="text-brand-navy-100 text-xl leading-relaxed">
               Every day at 11am, our expert Green Badge guides lead you on an immersive
               two-hour journey through 2,000 years of Canterbury history.
             </p>
@@ -40,7 +40,7 @@ export default function DailyToursPage() {
             ].map((item) => (
               <div key={item.label} className="bg-white rounded-xl p-6 shadow-md text-center">
                 <div className="text-3xl mb-2">{item.icon}</div>
-                <h3 className="font-bold text-brand-green-800 text-lg">{item.label}</h3>
+                <h3 className="font-bold text-brand-navy-800 text-lg">{item.label}</h3>
                 <p className="text-brand-gold-600 font-semibold text-xl">{item.time}</p>
                 <p className="text-gray-500 text-sm">{item.info}</p>
               </div>
@@ -61,7 +61,7 @@ export default function DailyToursPage() {
                 paved streets.
               </p>
 
-              <h3 className="font-serif text-2xl font-bold text-brand-green-800 mb-4">
+              <h3 className="font-serif text-2xl font-bold text-brand-navy-800 mb-4">
                 Tour Highlights
               </h3>
               <ul className="space-y-3">
@@ -96,14 +96,14 @@ export default function DailyToursPage() {
 
             <div className="space-y-6">
               {/* Pricing */}
-              <div className="bg-brand-green-800 text-white rounded-xl p-6">
+              <div className="bg-brand-navy-800 text-white rounded-xl p-6">
                 <h3 className="font-serif text-2xl font-bold mb-4">Prices</h3>
                 <div className="space-y-3">
-                  <div className="flex justify-between items-center border-b border-brand-green-700 pb-3">
+                  <div className="flex justify-between items-center border-b border-brand-navy-700 pb-3">
                     <span>Adults</span>
                     <span className="text-brand-gold-400 font-bold text-xl">£16</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-brand-green-700 pb-3">
+                  <div className="flex justify-between items-center border-b border-brand-navy-700 pb-3">
                     <span>Children (5–15)</span>
                     <span className="text-brand-gold-400 font-bold text-xl">£8</span>
                   </div>
@@ -112,7 +112,7 @@ export default function DailyToursPage() {
                     <span className="text-brand-gold-400 font-bold text-xl">FREE</span>
                   </div>
                 </div>
-                <p className="text-brand-green-200 text-sm mt-4">
+                <p className="text-brand-navy-200 text-sm mt-4">
                   * Cathedral grounds entry fee included in tour price
                 </p>
                 <Link href="/book/daily" className="btn-secondary mt-6 w-full text-center block">
@@ -122,49 +122,49 @@ export default function DailyToursPage() {
 
               {/* Extras */}
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <h3 className="font-serif text-xl font-bold text-brand-green-800 mb-4">
+                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">
                   Optional Add-ons
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-700">Traditional Cream Tea</span>
-                    <span className="font-semibold text-brand-green-800">+£18 per person</span>
+                    <span className="font-semibold text-brand-navy-800">+£18 per person</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-700">Roman Museum Entry</span>
-                    <span className="font-semibold text-brand-green-800">+£7 per person</span>
+                    <span className="font-semibold text-brand-navy-800">+£7 per person</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-700">Cathedral Audio Guide</span>
-                    <span className="font-semibold text-brand-green-800">+£5 per person</span>
+                    <span className="font-semibold text-brand-navy-800">+£5 per person</span>
                   </div>
                 </div>
               </div>
 
               {/* Important Info */}
-              <div className="bg-brand-cream rounded-xl p-6 border border-brand-green-200">
-                <h3 className="font-serif text-xl font-bold text-brand-green-800 mb-4">
+              <div className="bg-brand-cream rounded-xl p-6 border border-brand-navy-200">
+                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">
                   Good to Know
                 </h3>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-start">
-                    <span className="text-brand-green-600 mr-2">•</span>
+                    <span className="text-brand-navy-600 mr-2">•</span>
                     No booking required for groups of 1–6 — just turn up!
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green-600 mr-2">•</span>
+                    <span className="text-brand-navy-600 mr-2">•</span>
                     Groups of 7+ should book in advance
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green-600 mr-2">•</span>
+                    <span className="text-brand-navy-600 mr-2">•</span>
                     Tours run in all weathers — dress appropriately
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green-600 mr-2">•</span>
+                    <span className="text-brand-navy-600 mr-2">•</span>
                     Dogs welcome on a lead
                   </li>
                   <li className="flex items-start">
-                    <span className="text-brand-green-600 mr-2">•</span>
+                    <span className="text-brand-navy-600 mr-2">•</span>
                     Wheelchair accessible routes available on request
                   </li>
                 </ul>
@@ -175,10 +175,10 @@ export default function DailyToursPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 bg-brand-green-800 text-white">
+      <section className="py-12 bg-brand-navy-800 text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-serif text-2xl font-bold mb-4">Ready to Explore?</h2>
-          <p className="text-brand-green-200 mb-6">
+          <p className="text-brand-navy-200 mb-6">
             Secure your place on our next daily tour. Tours depart daily at 11am from the
             Canterbury Visitor Centre, Sun Street.
           </p>

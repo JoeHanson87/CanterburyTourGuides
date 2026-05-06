@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-brand-green-800 text-white py-16">
+      <section className="bg-brand-navy-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-brand-green-100 text-xl max-w-2xl leading-relaxed">
+          <p className="text-brand-navy-100 text-xl max-w-2xl leading-relaxed">
             We&apos;re here to help with tour bookings, group enquiries and any questions about
             our Canterbury walking tours.
           </p>
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   <div key={item.title} className="flex items-start space-x-4 bg-white rounded-xl p-4 shadow-sm">
                     <span className="text-2xl">{item.icon}</span>
                     <div>
-                      <h3 className="font-semibold text-brand-green-800">{item.title}</h3>
+                      <h3 className="font-semibold text-brand-navy-800">{item.title}</h3>
                       {item.lines.map((line) => (
                         <p key={line} className="text-gray-600 text-sm">{line}</p>
                       ))}
@@ -68,19 +68,19 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              <div className="bg-brand-green-800 text-white rounded-xl p-6">
+              <div className="bg-brand-navy-800 text-white rounded-xl p-6">
                 <h3 className="font-serif text-lg font-bold mb-3">Quick Links</h3>
                 <div className="space-y-2">
-                  <Link href="/book/daily" className="flex items-center text-brand-green-200 hover:text-white text-sm transition-colors">
+                  <Link href="/book/daily" className="flex items-center text-brand-navy-200 hover:text-white text-sm transition-colors">
                     → Book a Daily Tour
                   </Link>
-                  <Link href="/book/group" className="flex items-center text-brand-green-200 hover:text-white text-sm transition-colors">
+                  <Link href="/book/group" className="flex items-center text-brand-navy-200 hover:text-white text-sm transition-colors">
                     → Group Tour Enquiry
                   </Link>
-                  <Link href="/tours/daily" className="flex items-center text-brand-green-200 hover:text-white text-sm transition-colors">
+                  <Link href="/tours/daily" className="flex items-center text-brand-navy-200 hover:text-white text-sm transition-colors">
                     → Tour Information
                   </Link>
-                  <Link href="/about" className="flex items-center text-brand-green-200 hover:text-white text-sm transition-colors">
+                  <Link href="/about" className="flex items-center text-brand-navy-200 hover:text-white text-sm transition-colors">
                     → About Our Guides
                   </Link>
                 </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   },
                 ].map((faq) => (
                   <details key={faq.q} className="bg-white rounded-xl p-4 shadow-sm group">
-                    <summary className="font-semibold text-brand-green-800 cursor-pointer list-none flex justify-between items-center">
+                    <summary className="font-semibold text-brand-navy-800 cursor-pointer list-none flex justify-between items-center">
                       {faq.q}
                       <span className="text-brand-gold-600 ml-2 group-open:rotate-180 transition-transform">▼</span>
                     </summary>

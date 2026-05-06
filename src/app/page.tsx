@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-green-800 text-white overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
+      <section className="relative bg-brand-navy-800 text-white overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
         {/* Background photograph of Canterbury Cathedral */}
         <div className="absolute inset-0">
           <Image
@@ -25,7 +25,7 @@ export default function HomePage() {
             sizes="100vw"
           />
           {/* Dark navy overlay so text remains legible */}
-          <div className="absolute inset-0 bg-brand-green-900 opacity-70" />
+          <div className="absolute inset-0 bg-brand-navy-900 opacity-70" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
           <div className="max-w-3xl">
@@ -39,7 +39,7 @@ export default function HomePage() {
               Discover Canterbury&apos;s{' '}
               <span className="text-brand-gold-400">2,000 Years</span> of History
             </h1>
-            <p className="text-brand-green-100 text-xl mb-8 leading-relaxed">
+            <p className="text-brand-navy-100 text-xl mb-8 leading-relaxed">
               Led by fully qualified Green Badge City Guides — the highest guiding qualification
               in the UK. Explore Canterbury Cathedral grounds, medieval streets, Roman remains
               and hidden gems with experts who truly know this extraordinary city.
@@ -50,12 +50,12 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/tours/group"
-                className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-green-800 transition-colors duration-200 text-center"
+                className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-navy-800 transition-colors duration-200 text-center"
               >
                 Group Tours
               </Link>
             </div>
-            <div className="mt-8 flex items-center space-x-6 text-sm text-brand-green-200">
+            <div className="mt-8 flex items-center space-x-6 text-sm text-brand-navy-200">
               <div className="flex items-center space-x-2">
                 <span className="text-brand-gold-400">📍</span>
                 <span>Meets daily at 11am</span>
@@ -188,7 +188,7 @@ export default function HomePage() {
             ].map((item) => (
               <div key={item.title} className="text-center p-6">
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-serif text-xl font-bold text-brand-green-800 mb-3">
+                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
@@ -199,7 +199,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 bg-brand-green-50">
+      <section className="py-16 md:py-20 bg-brand-navy-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading mb-4">What Our Visitors Say</h2>
@@ -231,7 +231,7 @@ export default function HomePage() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-brand-green-800">{t.author}</p>
+                  <p className="font-semibold text-brand-navy-800">{t.author}</p>
                   <p className="text-gray-500 text-xs">{t.location}</p>
                   <p className="text-brand-gold-600 text-xs font-medium mt-1">{t.platform}</p>
                 </div>
@@ -242,12 +242,12 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-brand-green-800 text-white">
+      <section className="py-16 bg-brand-navy-800 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
             Ready to Explore Canterbury?
           </h2>
-          <p className="text-brand-green-200 text-lg mb-8">
+          <p className="text-brand-navy-200 text-lg mb-8">
             Join us for an unforgettable journey through one of England&apos;s most historic
             cities. Tours depart daily at 11am.
           </p>
@@ -255,7 +255,7 @@ export default function HomePage() {
             <Link href="/book/daily" className="btn-secondary">
               Book Your Place Today
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-green-800 transition-colors duration-200">
+            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-navy-800 transition-colors duration-200">
               Get in Touch
             </Link>
           </div>

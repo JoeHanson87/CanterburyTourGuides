@@ -46,10 +46,10 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Revenue Card */}
-      <div className="bg-brand-green-800 text-white rounded-xl p-6 mb-8">
+      <div className="bg-brand-navy-800 text-white rounded-xl p-6 mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-brand-green-200 text-sm">Total Revenue (Daily Tours)</p>
+            <p className="text-brand-navy-200 text-sm">Total Revenue (Daily Tours)</p>
             <p className="text-4xl font-bold mt-1">
               £{totalRevenue.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </p>
@@ -62,7 +62,7 @@ export default async function AdminDashboard() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="flex items-center justify-between p-6 border-b border-gray-100">
           <h2 className="font-serif text-xl font-bold text-gray-900">Recent Daily Bookings</h2>
-          <Link href="/admin/bookings/daily" className="text-brand-green-700 hover:text-brand-green-900 text-sm font-medium">
+          <Link href="/admin/bookings/daily" className="text-brand-navy-700 hover:text-brand-navy-900 text-sm font-medium">
             View all →
           </Link>
         </div>
