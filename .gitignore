@@ -6,3 +6,4 @@ node_modules
 .next/
 *.db
 *.db-journal
+.DS_Store

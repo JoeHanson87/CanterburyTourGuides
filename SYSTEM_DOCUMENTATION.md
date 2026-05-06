@@ -978,8 +978,6 @@ NEXTAUTH_URL=https://yourdomain.com (production)
 
 Canterbury Guided Tours now has a platform structure that supports both presentation and operations. On the public side, the website positions the business clearly, communicates the value of the tours, and gives visitors direct paths to book or enquire. On the operational side, the admin workspace brings bookings, guide management, scheduling, invoicing, and reporting into one coherent system.
 
-For PDF export and stakeholder review, this document is now arranged so the most important commercial and functional information appears first, with deeper technical detail retained in the appendices for reference.
-
 ---
 
 *Document Generated: May 4, 2026*
