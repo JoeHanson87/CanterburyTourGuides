@@ -60,7 +60,7 @@ export default function BookGroupPage() {
       <div className="min-h-screen bg-brand-cream flex items-center justify-center px-4">
         <div className="bg-white rounded-xl shadow-lg p-10 max-w-md w-full text-center">
           <div className="text-5xl mb-4">✅</div>
-          <h1 className="font-serif text-2xl font-bold text-brand-green-800 mb-3">
+          <h1 className="font-serif text-2xl font-bold text-brand-navy-800 mb-3">
             Enquiry Received!
           </h1>
           <p className="text-gray-600 mb-6">
@@ -81,7 +81,7 @@ export default function BookGroupPage() {
     <div className="min-h-screen bg-brand-cream py-12">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-brand-green-800 mb-2">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-brand-navy-800 mb-2">
             Group Tour Enquiry
           </h1>
           <p className="text-gray-600">
@@ -90,14 +90,14 @@ export default function BookGroupPage() {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="bg-white rounded-xl shadow-md p-8 space-y-6">
-          <h2 className="font-serif text-xl font-bold text-brand-green-800">Contact Details</h2>
+          <h2 className="font-serif text-xl font-bold text-brand-navy-800">Contact Details</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
               <input
                 type="text"
                 {...register('contactName')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
               {errors.contactName && <p className="text-red-500 text-xs mt-1">{errors.contactName.message}</p>}
             </div>
@@ -106,7 +106,7 @@ export default function BookGroupPage() {
               <input
                 type="text"
                 {...register('organisation')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
             </div>
             <div>
@@ -114,7 +114,7 @@ export default function BookGroupPage() {
               <input
                 type="email"
                 {...register('email')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
             </div>
@@ -123,21 +123,21 @@ export default function BookGroupPage() {
               <input
                 type="tel"
                 {...register('phone')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
               {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
             </div>
           </div>
 
           <hr className="border-gray-200" />
-          <h2 className="font-serif text-xl font-bold text-brand-green-800">Group Details</h2>
+          <h2 className="font-serif text-xl font-bold text-brand-navy-800">Group Details</h2>
 
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Group Type *</label>
               <select
                 {...register('groupType')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               >
                 <option value="">Select group type</option>
                 <option value="school">School / College</option>
@@ -156,7 +156,7 @@ export default function BookGroupPage() {
                 min={10}
                 max={60}
                 {...register('groupSize')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
               {errors.groupSize && <p className="text-red-500 text-xs mt-1">{errors.groupSize.message}</p>}
             </div>
@@ -166,7 +166,7 @@ export default function BookGroupPage() {
             <label className="block text-sm font-medium text-gray-700 mb-1">Tour Theme *</label>
             <select
               {...register('tourTheme')}
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
             >
               <option value="">Select a theme</option>
               <option value="classic">Classic Canterbury</option>
@@ -188,7 +188,7 @@ export default function BookGroupPage() {
                 type="date"
                 min={today}
                 {...register('preferredDate')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
               {errors.preferredDate && <p className="text-red-500 text-xs mt-1">{errors.preferredDate.message}</p>}
             </div>
@@ -198,7 +198,7 @@ export default function BookGroupPage() {
                 type="date"
                 min={today}
                 {...register('alternativeDate')}
-                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
               />
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function BookGroupPage() {
               {...register('requirements')}
               rows={4}
               placeholder="Accessibility needs, specific interests, age range, any other details..."
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
             />
           </div>
 

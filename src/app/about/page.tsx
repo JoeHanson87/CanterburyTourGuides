@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -10,11 +11,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-brand-green-800 text-white py-16">
+      <section className="bg-brand-navy-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-            <p className="text-brand-green-100 text-xl leading-relaxed">
+            <p className="text-brand-navy-100 text-xl leading-relaxed">
               We are a team of passionate, fully qualified Green Badge City Guides dedicated to
               sharing the extraordinary history of Canterbury with visitors from around the world.
             </p>
@@ -45,7 +46,7 @@ export default function AboutPage() {
                 passion and expert knowledge.
               </p>
 
-              <h3 className="font-serif text-2xl font-bold text-brand-green-800 mb-4">
+              <h3 className="font-serif text-2xl font-bold text-brand-navy-800 mb-4">
                 The Green Badge
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -62,7 +63,18 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-brand-green-800 text-white rounded-xl p-6">
+              {/* Canterbury aerial image */}
+              <div className="relative rounded-xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Canterbury_Cathedral_from_the_air_1_trimmed.jpg/1280px-Canterbury_Cathedral_from_the_air_1_trimmed.jpg"
+                  alt="Aerial view of Canterbury Cathedral and the city"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+
+              <div className="bg-brand-navy-800 text-white rounded-xl p-6">
                 <h3 className="font-serif text-2xl font-bold mb-6">By the Numbers</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
@@ -71,16 +83,16 @@ export default function AboutPage() {
                     { number: '10,000+', label: 'Visitors Per Year' },
                     { number: '100%', label: 'Green Badge Qualified' },
                   ].map((stat) => (
-                    <div key={stat.label} className="text-center p-3 border border-brand-green-700 rounded-lg">
+                    <div key={stat.label} className="text-center p-3 border border-brand-navy-700 rounded-lg">
                       <div className="text-brand-gold-400 font-bold text-xl">{stat.number}</div>
-                      <div className="text-brand-green-200 text-xs mt-1">{stat.label}</div>
+                      <div className="text-brand-navy-200 text-xs mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <h3 className="font-serif text-xl font-bold text-brand-green-800 mb-4">
+                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-4">
                   Accreditations &amp; Memberships
                 </h3>
                 <ul className="space-y-3">
@@ -97,8 +109,8 @@ export default function AboutPage() {
                 </ul>
               </div>
 
-              <div className="bg-brand-cream rounded-xl p-6 border border-brand-green-200">
-                <h3 className="font-serif text-xl font-bold text-brand-green-800 mb-3">
+              <div className="bg-brand-cream rounded-xl p-6 border border-brand-navy-200">
+                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-3">
                   Continuous Professional Development
                 </h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -112,10 +124,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12 bg-brand-green-800 text-white">
+      <section className="py-12 bg-brand-navy-800 text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-serif text-2xl font-bold mb-4">Come and Meet Us</h2>
-          <p className="text-brand-green-200 mb-6">
+          <p className="text-brand-navy-200 mb-6">
             Join us daily at 11am outside the Canterbury Visitor Centre, Sun Street.
             We&apos;d love to share Canterbury&apos;s history with you.
           </p>
@@ -123,7 +135,7 @@ export default function AboutPage() {
             <Link href="/book/daily" className="btn-secondary">
               Book a Tour
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-green-800 transition-colors duration-200">
+            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-navy-800 transition-colors duration-200">
               Contact Us
             </Link>
           </div>

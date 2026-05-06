@@ -29,11 +29,11 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-brand-green-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-brand-navy-900 flex items-center justify-center px-4">
       <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="text-4xl mb-3">🗝️</div>
-          <h1 className="font-serif text-2xl font-bold text-brand-green-800">Admin Login</h1>
+          <h1 className="font-serif text-2xl font-bold text-brand-navy-800">Admin Login</h1>
           <p className="text-gray-500 text-sm mt-1">Canterbury Guided Tours Management</p>
         </div>
 
@@ -46,7 +46,7 @@ export default function AdminLoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
             />
           </div>
           <div>
@@ -57,7 +57,7 @@ export default function AdminLoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="current-password"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green-600"
+              className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy-600"
             />
           </div>
 
