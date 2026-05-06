@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -80,6 +81,17 @@ export default function DailyToursPage() {
                   </li>
                 ))}
               </ul>
+
+              {/* Canterbury Cathedral photo */}
+              <div className="relative mt-8 rounded-xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Canterbury_Cathedral_-_Portal_Nave_Cross-spire.jpeg/800px-Canterbury_Cathedral_-_Portal_Nave_Cross-spire.jpeg"
+                  alt="Canterbury Cathedral, a UNESCO World Heritage Site"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </div>
 
             <div className="space-y-6">

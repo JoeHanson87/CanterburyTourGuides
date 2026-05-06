@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -62,6 +63,17 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-6">
+              {/* Canterbury aerial image */}
+              <div className="relative rounded-xl overflow-hidden shadow-md aspect-[4/3]">
+                <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Canterbury_Cathedral_from_the_air_1_trimmed.jpg/1280px-Canterbury_Cathedral_from_the_air_1_trimmed.jpg"
+                  alt="Aerial view of Canterbury Cathedral and the city"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+
               <div className="bg-brand-green-800 text-white rounded-xl p-6">
                 <h3 className="font-serif text-2xl font-bold mb-6">By the Numbers</h3>
                 <div className="grid grid-cols-2 gap-4">
