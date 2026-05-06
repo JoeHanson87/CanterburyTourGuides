@@ -13,95 +13,103 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-brand-navy-800 text-white overflow-hidden min-h-[480px] md:min-h-[560px] flex items-center">
-        {/* Background photograph of Canterbury Cathedral */}
-        <div className="absolute inset-0">
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Canterbury_Cathedral_-_Portal_Nave_Cross-spire.jpeg/1280px-Canterbury_Cathedral_-_Portal_Nave_Cross-spire.jpeg"
-            alt="Canterbury Cathedral"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="100vw"
-          />
-          {/* Dark navy overlay so text remains legible */}
-          <div className="absolute inset-0 bg-brand-navy-900 opacity-70" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
-          <div className="max-w-3xl">
-            <div className="flex items-center space-x-2 mb-6">
-              <span className="bg-brand-gold-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                Green Badge Certified
-              </span>
-              <span className="text-brand-gold-400 text-sm">★★★★★ 5-Star Rated</span>
-            </div>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Discover Canterbury&apos;s{' '}
-              <span className="text-brand-gold-400">2,000 Years</span> of History
-            </h1>
-            <p className="text-brand-navy-100 text-xl mb-8 leading-relaxed">
-              Led by fully qualified Green Badge City Guides — the highest guiding qualification
-              in the UK. Explore Canterbury Cathedral grounds, medieval streets, Roman remains
-              and hidden gems with experts who truly know this extraordinary city.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/book/daily" className="btn-secondary text-center">
-                Book a Daily Tour
-              </Link>
-              <Link
-                href="/tours/group"
-                className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-navy-800 transition-colors duration-200 text-center"
-              >
-                Group Tours
-              </Link>
-            </div>
-            <div className="mt-8 flex items-center space-x-6 text-sm text-brand-navy-200">
-              <div className="flex items-center space-x-2">
-                <span className="text-brand-gold-400">📍</span>
-                <span>Meets daily at 11am</span>
+      <section className="relative overflow-hidden" style={{ height: '480px' }}>
+        <Image
+          src="/images/banner-tour-group.jpg"
+          alt="Canterbury Official Guide leading a tour through the city streets"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        {/* Red accent bar at bottom of hero */}
+        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-brand-red-600" />
+      </section>
+
+      {/* Intro Section */}
+      <section className="py-10 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2">
+              <h1 className="section-heading mb-4">
+                Official Canterbury City Guided Walking Tours
+              </h1>
+              <div className="border border-gray-300 rounded px-4 py-2 mb-5 text-sm font-semibold text-gray-700 inline-block">
+                Tours running daily at 11am
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-brand-gold-400">🏛️</span>
-                <span>Cathedral grounds access</span>
+              <p className="text-gray-700 mb-4">
+                Canterbury Guided Tours provide entertaining 90-minute walking tours for visitors
+                to the historic city of Canterbury. Our tours all include access to the Cathedral
+                Precincts, are led by{' '}
+                <strong>fully qualified Green Badge Guides</strong>, and are the official tours
+                of the city.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Tours run <strong>daily at 11am</strong>, with additional 2pm tour seasonally.{' '}
+                <strong>Private tours</strong> and themed walks for couples, groups and schools
+                are available to book in advance.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/book/daily" className="btn-primary text-center">
+                  Book a Daily Tour
+                </Link>
+                <Link href="/tours/group" className="btn-outline text-center">
+                  Group Tours
+                </Link>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-brand-gold-400">🎖️</span>
-                <span>Green Badge guides</span>
+            </div>
+            <div className="hidden md:block">
+              <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
+                <h3 className="font-serif text-lg font-bold text-brand-red-600 mb-3">
+                  Latest News
+                </h3>
+                <div className="overflow-hidden rounded-lg mb-3">
+                  <Image
+                    src="/images/banner-cathedral-night.jpg"
+                    alt="Canterbury Cathedral at night"
+                    width={400}
+                    height={160}
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                <p className="text-sm text-gray-600">
+                  Tours are running daily at 11am. Join us to discover Canterbury&apos;s rich
+                  history with our expert Green Badge Guides.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Awards Bar */}
-      <section className="bg-brand-gold-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-sm font-medium">
-            <div className="flex items-center space-x-2">
-              <span className="text-xl">★★★★★</span>
-              <span>TripAdvisor Travellers&apos; Choice</span>
+      {/* Image Gallery */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <Image
+                src="/images/guides-homepage.jpg"
+                alt="Canterbury Guided Tours team of Green Badge Guides"
+                width={840}
+                height={330}
+                className="w-full h-64 object-cover"
+              />
             </div>
-            <div className="w-px h-6 bg-brand-gold-400 hidden md:block" />
-            <div className="flex items-center space-x-2">
-              <span className="text-xl">★★★★★</span>
-              <span>GetYourGuide Top Rated</span>
-            </div>
-            <div className="w-px h-6 bg-brand-gold-400 hidden md:block" />
-            <div className="flex items-center space-x-2">
-              <span className="text-xl">🎖️</span>
-              <span>Institute of Tourist Guiding Accredited</span>
-            </div>
-            <div className="w-px h-6 bg-brand-gold-400 hidden md:block" />
-            <div className="flex items-center space-x-2">
-              <span className="text-xl">🏛️</span>
-              <span>Official Cathedral Grounds Access</span>
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <Image
+                src="/images/cathedral.png"
+                alt="Canterbury Cathedral"
+                width={880}
+                height={640}
+                className="w-full h-64 object-cover object-top"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Tours */}
-      <section className="py-16 md:py-24 bg-brand-cream">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading mb-4">Our Walking Tours</h2>
@@ -188,7 +196,7 @@ export default function HomePage() {
             ].map((item) => (
               <div key={item.title} className="text-center p-6">
                 <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-serif text-xl font-bold text-brand-navy-800 mb-3">
+                <h3 className="font-serif text-xl font-bold text-brand-grey-900 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
@@ -199,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-20 bg-brand-navy-50">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-heading mb-4">What Our Visitors Say</h2>
@@ -226,14 +234,14 @@ export default function HomePage() {
               },
             ].map((t) => (
               <div key={t.author} className="bg-white rounded-xl p-6 shadow-md">
-                <div className="text-brand-gold-500 text-xl mb-3">★★★★★</div>
+                <div className="text-brand-red-600 text-xl mb-3">★★★★★</div>
                 <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <div>
-                  <p className="font-semibold text-brand-navy-800">{t.author}</p>
+                  <p className="font-semibold text-brand-grey-900">{t.author}</p>
                   <p className="text-gray-500 text-xs">{t.location}</p>
-                  <p className="text-brand-gold-600 text-xs font-medium mt-1">{t.platform}</p>
+                  <p className="text-brand-red-600 text-xs font-medium mt-1">{t.platform}</p>
                 </div>
               </div>
             ))}
@@ -242,20 +250,20 @@ export default function HomePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-brand-navy-800 text-white">
+      <section className="py-16 bg-brand-grey-800 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
             Ready to Explore Canterbury?
           </h2>
-          <p className="text-brand-navy-200 text-lg mb-8">
+          <p className="text-white/80 text-lg mb-8">
             Join us for an unforgettable journey through one of England&apos;s most historic
             cities. Tours depart daily at 11am.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book/daily" className="btn-secondary">
+            <Link href="/book/daily" className="btn-primary">
               Book Your Place Today
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-navy-800 transition-colors duration-200">
+            <Link href="/contact" className="border-2 border-white text-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-brand-grey-800 transition-colors duration-200">
               Get in Touch
             </Link>
           </div>

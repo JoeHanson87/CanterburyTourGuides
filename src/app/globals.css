@@ -5,27 +5,29 @@
 :root {
   --brand-navy: #003d63;
   --brand-gold: #c07828;
+  --brand-red: #cc0000;
+  --brand-grey: #444444;
   --brand-cream: #fafaf8;
   --brand-charcoal: #1a1a1a;
 }
 
 body {
-  background-color: var(--brand-cream);
+  background-color: #ffffff;
   color: var(--brand-charcoal);
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-navy-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-brand-navy-700 transition-colors duration-200 inline-block;
+    @apply bg-brand-red-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-brand-red-700 transition-colors duration-200 inline-block;
   }
   .btn-secondary {
-    @apply bg-brand-gold-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-brand-gold-700 transition-colors duration-200 inline-block;
+    @apply bg-brand-red-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-brand-red-700 transition-colors duration-200 inline-block;
   }
   .btn-outline {
-    @apply border-2 border-brand-navy-800 text-brand-navy-800 px-6 py-3 rounded-md font-semibold hover:bg-brand-navy-800 hover:text-white transition-colors duration-200 inline-block;
+    @apply border-2 border-brand-red-600 text-brand-red-600 px-6 py-3 rounded-md font-semibold hover:bg-brand-red-600 hover:text-white transition-colors duration-200 inline-block;
   }
   .section-heading {
-    @apply text-3xl md:text-4xl font-serif text-brand-navy-800 font-bold;
+    @apply text-3xl md:text-4xl font-serif text-brand-red-600 font-bold;
   }
   .card {
     @apply bg-white rounded-xl shadow-md overflow-hidden;
